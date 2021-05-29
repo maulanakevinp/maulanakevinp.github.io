@@ -133,7 +133,7 @@
                                 jumlah  : jumlah,
                             };
 
-                            let daftar_belanja = JSON.parse(localStorage.getItem('daftar_belanja'));
+                            let daftar_belanja = JSON.parse(localStorage.getItem('daftar_belanja')) ?? [];
                             daftar_belanja.push(belanja);
                             localStorage.setItem('daftar_belanja', JSON.stringify(daftar_belanja));
 
