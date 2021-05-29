@@ -119,7 +119,7 @@
                             total = total + jumlah;
                             document.getElementById('total').innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(total);
                             form.reset();
-                            nama.focus();
+                            document.getElementById('item_belanja').focus();
                         }
                     }, false);
                 });
