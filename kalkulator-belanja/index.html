@@ -100,9 +100,9 @@
                         <a href="#" class="btn btn-danger btn-sm hapus" data-jumlah="${item.jumlah}" data-id="${item.id}" title="Hapus">X</a>
                     `;
                     cell_item_belanja.innerHTML = `<div style="word-wrap: break-word;">${item.nama}<br>${item.qty} x ${new Intl.NumberFormat('id-ID').format(item.harga)}</div>`;
-                    cell_jumlah.innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(item.jumlah);
+                    cell_jumlah.innerHTML = new Intl.NumberFormat('id-ID').format(item.jumlah);
                     total = total + item.jumlah;
-                    document.getElementById('total').innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(total);
+                    document.getElementById('total').innerHTML = new Intl.NumberFormat('id-ID').format(total);
                     id = item.id;
                 });
             }
@@ -141,9 +141,9 @@
                                 <a href="#" class="btn btn-danger btn-sm hapus" data-jumlah="${jumlah}" data-id="${id}" title="Hapus">X</a>
                             `;
                             cell_item_belanja.innerHTML = `<div style="word-wrap: break-word;">${nama}<br>${qty} x ${new Intl.NumberFormat('id-ID').format(harga)}</div>`;
-                            cell_jumlah.innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(jumlah);
+                            cell_jumlah.innerHTML = new Intl.NumberFormat('id-ID').format(jumlah);
                             total = total + jumlah;
-                            document.getElementById('total').innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(total);
+                            document.getElementById('total').innerHTML = new Intl.NumberFormat('id-ID').format(total);
                             form.reset();
                             document.getElementById('item_belanja').focus();
                             location.reload();
@@ -168,7 +168,7 @@
                     localStorage.setItem('daftar_belanja', JSON.stringify(temp_daftar_belanja));
                     row.remove();
                     total = total - jumlah_pengurangan;
-                    document.getElementById('total').innerHTML = 'Rp. ' + new Intl.NumberFormat('id-ID').format(total);
+                    document.getElementById('total').innerHTML = new Intl.NumberFormat('id-ID').format(total);
                     location.reload();
                 }
             });
